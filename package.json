@@ -1,0 +1,26 @@
+{
+  "name": "bamazon-store-front",
+  "version": "1.0.0",
+  "description": "Storefront for customers to purchase products from existing inventory",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "Bamazon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garrettmmoore/bamazon-store-front.git"
+  },
+  "keywords": [
+    "bamazon"
+  ],
+  "author": "Garrett Moore",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/garrettmmoore/bamazon-store-front/issues"
+  },
+  "homepage": "https://github.com/garrettmmoore/bamazon-store-front#readme",
+  "dependencies": {
+    "inquirer": "^3.2.2",
+    "mysql": "^2.14.1"
+  }
+}
