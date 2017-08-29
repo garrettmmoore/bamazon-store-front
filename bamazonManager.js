@@ -13,7 +13,7 @@ var connection = mysql.createConnection
     user: "root",
   
     // Your password
-    password: "",
+    password: "Pugluverg51",
     database: "bamazon_DB"
 });
 
@@ -202,10 +202,10 @@ function addProduct(){
         // var insertPrice = answer.insertPrice;
         // var insertQuantity = answer.insertQuantity;
 
-        var sql = "INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ?";
+        // var sql = "INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ?";
         var values = 
         
-        connection.query(sql,
+        connection.query("INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ?",
             [
                 {
                     product_name: answer.insertName
@@ -220,7 +220,7 @@ function addProduct(){
                     stock_quantity: answer.insertQuantity
                 }
             ],
-            function (err, res) {
+            function (err) {
             if (err) throw err;
             console.log("1 record inserted, ID: " + res.insertId);
           });

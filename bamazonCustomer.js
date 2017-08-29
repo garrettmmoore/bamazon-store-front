@@ -107,6 +107,7 @@ function quantity(id, stock)
         if(res[0].stock_quantity < stock)
         {
             console.log("Out of stock".red.bold);
+            replay();
         }
         else
         {
