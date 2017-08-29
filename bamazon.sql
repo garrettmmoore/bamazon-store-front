@@ -16,7 +16,7 @@ INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("Bose QuietComfort 35", "Headphones ", 349.00, 4000);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("Apple iPad Pro", "Tablet", 839.99, 1500);
+VALUES ("Apple iPad Pro", "Tablet", 839.99, 3);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("ASUS Portable Monitor", "Monitors",154.64, 2500);
