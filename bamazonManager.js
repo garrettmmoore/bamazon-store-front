@@ -203,31 +203,30 @@ function addProduct(){
         // var insertQuantity = answer.insertQuantity;
 
         // var sql = "INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ?";
-        var values = 
+        // var values = 
         
-        connection.query("INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ?",
-            [
+        connection.query("INSERT INTO products SET ?",
+            
                 {
-                    product_name: answer.insertName
-                },
-                {
-                    department_name: answer.insertDepartment
-                },
-                {
-                    price: answer.insertPrice
-                },
-                {
+                    product_name: answer.insertName,
+                
+                    department_name: answer.insertDepartment,
+                
+                    price: answer.insertPrice,
+                
                     stock_quantity: answer.insertQuantity
-                }
-            ],
-            function (err) {
-            if (err) throw err;
+                },
+            
+            function (err, res) {
+            if (err) 
+            {
+                console.log(err);
+                return;
+            }
             console.log("1 record inserted, ID: " + res.insertId);
           });
     });
 }
-
-
 
 function replay()
 {
