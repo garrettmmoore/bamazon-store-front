@@ -4,7 +4,7 @@ CREATE TABLE products (
 	item_id INTEGER NOT NULL AUTO_INCREMENT,
     product_name VARCHAR(100) NULL,
     department_name VARCHAR(100) NULL,
-    price DECIMAL(10,2) NULL,
+    price DECIMAL(10,3) NULL,
     stock_quantity INTEGER(10) NULL,
     PRIMARY KEY (item_id)
 );
@@ -34,7 +34,7 @@ INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("Adobe Photoshop Elements", "Software", 59.99, 5000);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
-VALUES ("Nintendo Switch", "Video Games", 376.50, 200);
+VALUES ("Nintendo Switch", "Video Games", 376.50, 1);
 
 INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("Splatoon 2", "Video Games", 58.95, 1000);
