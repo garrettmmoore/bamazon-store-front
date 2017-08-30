@@ -2,7 +2,7 @@
 
 # README for bamazonCustomer
 
-#Application
+##Application
 Hello! Welcome to Bamazon! This program allows the user (customer) to purchase items from Bamazon's database
 from the terminal/commandprompt.
 
