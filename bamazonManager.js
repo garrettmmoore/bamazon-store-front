@@ -90,12 +90,23 @@ function viewLowInventory()
             return;
         }
         console.log(res);
-        // start();
+        replay();
     });
 };
 
 function addInventory() 
 {
+    connection.query("SELECT * FROM products", function(err, res) 
+    {
+        if (err) 
+        {
+            console.log(err);
+            return;
+        }
+        console.log(res);
+        add();
+    });
+    function add(){
     inquirer.prompt([
         {
             type: "input",
@@ -119,7 +130,9 @@ function addInventory()
             console.log("\nInvalid input. Please enter a number.".red.bold);
             addInventory();
         } 
+        
     });
+}
 }
 
 function quantity(id, stock) 
@@ -135,7 +148,6 @@ function quantity(id, stock)
             console.log(err);
             return;
         }
-
         if(res[0].stock_quantity > 6000)
         {
             console.log("That is too much stock".red.bold);
@@ -147,7 +159,7 @@ function quantity(id, stock)
                 "UPDATE products SET ? WHERE ?",
                 [
                     {
-                        stock_quantity: res[0].stock_quantity + stock
+                        stock_quantity: res[0].stock_quantity + parseInt(stock)
                     },
                     {
                         item_id: id
@@ -157,22 +169,20 @@ function quantity(id, stock)
                 {
                     console.log(res[0]);
                     console.log("\nYour inventory has been updated!\n".green.bold);
-                    
-                    replay();
-                    
                     if (err) 
                     {
                         console.log(err);
                         return;
                     }
+                    replay();
                 }
             );
         }
     }
 )}
 
-function addProduct(){
-    
+function addProduct()
+{
     inquirer.prompt([
         {
             type: "input",
@@ -196,35 +206,24 @@ function addProduct(){
         },
     ])
     .then(function(answer) 
-    {
-        // var insertName = answer.insertName;
-        // var insertDepartment = answer.insertDepartment;
-        // var insertPrice = answer.insertPrice;
-        // var insertQuantity = answer.insertQuantity;
-
-        // var sql = "INSERT INTO products (product_name, department_name, price, stock_quantity) VALUES ?";
-        // var values = 
-        
+    {   
         connection.query("INSERT INTO products SET ?",
-            
-                {
-                    product_name: answer.insertName,
-                
-                    department_name: answer.insertDepartment,
-                
-                    price: answer.insertPrice,
-                
-                    stock_quantity: answer.insertQuantity
-                },
-            
-            function (err, res) {
+        {
+            product_name: answer.insertName,
+            department_name: answer.insertDepartment,
+            price: answer.insertPrice,
+            stock_quantity: answer.insertQuantity
+        },
+        function (err, res) 
+        {
             if (err) 
             {
                 console.log(err);
                 return;
             }
-            console.log("1 record inserted, ID: " + res.insertId);
-          });
+        console.log("1 record inserted, ID: " + res.insertId);
+        replay();
+        });
     });
 }
 
