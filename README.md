@@ -34,6 +34,7 @@ from the terminal/commandprompt.
 2. Note that this purchase is reflected in our database table. Here, the stock-quantity decreased.
 
 ![updated-table](/images/updated-table.png)
+
 3. If the item is not in stock, you will be notified and asked if you want to continue shopping.
 ![no-stock](/images/no-stock.png)
 
