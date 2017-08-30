@@ -106,33 +106,34 @@ function addInventory()
         console.log(res);
         add();
     });
-    function add(){
-    inquirer.prompt([
-        {
-            type: "input",
-            name: "id",
-            message: "\nPlease enter the ID for the product you want to add inventory to? (number): ".blue.bold
-        },
-        {
-            type: "input",
-            name: "stock",
-            message: "\nPlease enter how much of the product you would like to add? (number): ".blue.bold
-        },
-    ])
-    .then(function(answer) 
+    function add()
     {
-        if (Number.isInteger(parseInt(answer.id)) && Number.isInteger(parseInt(answer.stock))) 
-        {   
-            quantity(answer.id, answer.stock);
-        }
-        else 
+        inquirer.prompt([
+            {
+                type: "input",
+                name: "id",
+                message: "\nPlease enter the ID for the product you want to add inventory to? (number): ".blue.bold
+            },
+            {
+                type: "input",
+                name: "stock",
+                message: "\nPlease enter how much of the product you would like to add? (number): ".blue.bold
+            },
+        ])
+        .then(function(answer) 
         {
-            console.log("\nInvalid input. Please enter a number.".red.bold);
-            addInventory();
-        } 
-        
-    });
-}
+            if (Number.isInteger(parseInt(answer.id)) && Number.isInteger(parseInt(answer.stock))) 
+            {   
+                quantity(answer.id, answer.stock);
+            }
+            else 
+            {
+                console.log("\nInvalid input. Please enter a number.".red.bold);
+                addInventory();
+            } 
+            
+        });
+    }
 }
 
 function quantity(id, stock) 
