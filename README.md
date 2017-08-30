@@ -21,6 +21,7 @@ from the terminal/commandprompt.
 ## Step 2
 1. You will then see an object with Bamazon's inventory. Look for the item_id.
 2. You can also check to make sure the object matches up to the information from your database table using MySQLWorkbench.
+
 ![initial-table](/images/initial-table.png)
 1. Enter the item_id as a number(ex. 6) when prompted.
 2. Enter the quantity of the item you want to buy as a number(ex. 100).
@@ -31,6 +32,7 @@ from the terminal/commandprompt.
     1. Select yes if you would like to proceed with the purchase.
     ![purchase](/images/purchase.png)
 2. Note that this purchase is reflected in our database table. Here, the stock-quantity decreased.
+
 ![updated-table](/images/updated-table.png)
 3. If the item is not in stock, you will be notified and asked if you want to continue shopping.
 ![no-stock](/images/no-stock.png)
