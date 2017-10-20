@@ -1,15 +1,12 @@
-# bamazon-store-front
-
-# README for bamazonCustomer
+# Bamazon Store Front
+### By Garrett Moore
 
 ##Application
-Hello! Welcome to Bamazon! This program allows the user (customer) to purchase items from Bamazon's database
-from the terminal/commandprompt.
-
+Hello! Welcome to Bamazon! This program allows the user (customer) to purchase items from Bamazon's database from the terminal/commandprompt.
 
 ## Installation
 1. First things first. Download the appropriate npm packages by running npm install.
-2. Make sure you enter your database password in the bamazonCustomer.js file!
+2. Make sure you enter your database password in the bamazonCustomer.js file.
 3. Then, run the bamazonCustomer.js file in Terminal/Command Prompt.
 ![npm-terminal](/images/npm-terminal.png)
 
@@ -45,5 +42,6 @@ from the terminal/commandprompt.
 3. Select yes to be redirected to Bamazon's inventory.
 
 ## End
-Thank you for using bamazon! Please contact me directly if you have any questions.
+Thank you for using Bamazon Store Front! Please contact me directly if you have any questions.
+
 https://github.com/garrettmmoore
