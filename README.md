@@ -5,7 +5,7 @@
 Hello, welcome to Bamazon! This CLI (Command-line-interface) program acts as an online store-front that allows the user (customer) to purchase items from Bamazon's database. The app takes in orders from customers and depletes stock from the store's inventory.
 
 # Built With
-Bamazon is built using node.js and MySQL. The application is purely backend and uses a MySQL database.
+Bamazon is built with Node.js and MySQL. The application is purely backend and uses a MySQL database.
 
 Node Packages Used: inquirer, mysql, colors
 
@@ -13,12 +13,12 @@ Node Packages Used: inquirer, mysql, colors
 
 ## Installation
 1. Download the appropriate npm packages by running npm install.
-2. Create a MySQL database and use the bamazon.sql seeds to create tables with usable data.
+2. Create a MySQL database and use the bamazon.sql seeds to create a table with usable data.
 2. Make sure you enter your database name and database password in the bamazonCustomer.js and bamazonManager.js files.
 
 ## Customer Mode
 
-### Step 1
+### Step 1:
 1. Begin Customer Mode by running the following command in the terminal/commandprompt:
 
 ```
@@ -27,15 +27,15 @@ node bamazonCustomer.js
 
 2. In Customer Mode, a user has the ability to view the store's inventory and purchase items.
 
-### Step 2
+### Step 2:
 1. Select whether or not you want to view the store's inventory.
     1. Make sure you use the arrow keys and then space bar, then enter to select your choice.
 
     ![initial-selection](/images/initial-selection.png)
 
-### Step 3
+### Step 3:
 1. You will then see an object with Bamazon's inventory. Look for the item_id.
-2. You can also check to make sure the object matches up to the information from your database table using a GUI of your choice such as MySQLWorkbench.
+2. You can also check to make sure the object matches up with the information from your database table using a GUI of your choice such as MySQLWorkbench.
 
 ![initial-table](/images/initial-table.png)
 
@@ -44,7 +44,7 @@ node bamazonCustomer.js
 
 ![view-inventory](/images/view-inventory.png)
 
-### Step 4
+### Step 4:
 1. If the item is in stock, you will see a message notifying you that the item is in stock.
     1. Select yes if you would like to proceed with the purchase.
 
@@ -58,7 +58,7 @@ node bamazonCustomer.js
 
 ![no-stock](/images/no-stock.png)
 
-### Step 5
+### Step 5:
 1. After you've made your purchase, you will be notified how much you spent.
 2. You will then be asked if you would like to make another purchase.
 
@@ -68,7 +68,7 @@ node bamazonCustomer.js
 
 ## Manager Mode
 
-### Step 1
+### Step 1:
 1. Begin Manager Mode by running the following command in the terminal/commandprompt:
 
 ```
@@ -79,19 +79,19 @@ node bamazonManager.js
 
 ![manager-choices](/images/manager-choices.png)
 
-### Step 2 View Products For Sale
+### Step 2 - View Products For Sale:
 1. Selecting this will list every available item: the item IDs, names, prices, and quantities.
 
-### Step 3 View Low Inventory
+### Step 3 - View Low Inventory:
 1. Selecting this will display all items with an inventory count lower than five.
 
-### Step 4 Add to Inventory
+### Step 4 - Add to Inventory:
 1. Selecting this will allow the user to add stock to any item that currently exists in the store's inventory.
 2. The user will then be prompted to answer the following questions:
 
 ![manager-add-inventory](/images/manager-add-inventory.png)
 
-### Step 5 Add New Product
+### Step 5 - Add New Product:
 1. Selecting this will allow the user to add an entirely new product to the store's inventory.
 2. The user will then be prompted to answer the following questions:
 
